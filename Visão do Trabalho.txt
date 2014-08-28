@@ -1,0 +1,12 @@
+
+• Qual o problema?
+    Localizar de forma ágil, próximo a uma localização, posts no facebook para coleta de informações, para posterior utilização em pesquisas de mercado.
+
+• Quem são os usuários do sistema?
+	Prof. Marcos Mangan, Mário, Jennifer, Agatha, Jonathan.
+	
+• Quais as principais caracteristicas do sistema?
+	- O usuário insere uma palavra chave para busca no facebook;
+	- Após pesquisa, retorna listagem com nome, localização, post e data do post;
+	- Informação é armazenada para utilização posterior;
+
