@@ -17,15 +17,28 @@ public class RestauranteDAO {
         resultado.add(rest);
     }
 
-    public List<Restaurante> consultarRestaurantes(Bairro bairro) {
+    public List<Restaurante> consultarRestaurantesBairro(Bairro bairro) {
         List<Restaurante> r = new ArrayList<>();
-        for(Restaurante s : resultado)
-            if (s.getBairro().equals(bairro))
+        for (Restaurante s : resultado) {
+            if (s.getBairro().equals(bairro)) {
                 r.add(s);
-        
+            }
+        }
+
         return r;
     }
-    
+
+    public List<Restaurante> consultarRestaurantesNome(String nome) {
+        List<Restaurante> r = new ArrayList<>();
+        for (Restaurante s : resultado) {
+            if (s.getNome().equals(nome)) {
+                r.add(s);
+            }
+        }
+
+        return r;
+    }
+
     public void preparar() {
         Bairro b1 = new Bairro("Azenha");
         Bairro b2 = new Bairro("Centro");
@@ -34,5 +47,4 @@ public class RestauranteDAO {
         inserirRestaurante("Restaurante ABC", b2);
         inserirRestaurante("Restaurante 123", b2);
     }
-    
 }

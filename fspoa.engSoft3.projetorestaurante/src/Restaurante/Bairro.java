@@ -28,12 +28,11 @@ public class Bairro {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        
+
         final Bairro other = (Bairro) obj;
         if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
         return true;
     }
-    
 }

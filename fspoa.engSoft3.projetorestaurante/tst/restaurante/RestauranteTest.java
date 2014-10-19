@@ -27,13 +27,32 @@ public class RestauranteTest {
 
     @Test
     public void testConsultarPorBairroCentro() {
-        List<Restaurante> restTest = dao.consultarRestaurantes(new Bairro("Centro"));
+        List<Restaurante> restTest = dao.consultarRestaurantesBairro(new Bairro("Centro"));
         assertEquals(2, restTest.size());
     }
     
     @Test
     public void testConsultarPorBairroAuxiliadora() {
-        List<Restaurante> restTest = dao.consultarRestaurantes(new Bairro("Auxiliadora"));
+        List<Restaurante> restTest = dao.consultarRestaurantesBairro(new Bairro("Auxiliadora"));
         assertEquals(0, restTest.size());
     }
+    
+    @Test
+    public void testConsultarPorBairroAzenha() {
+        List<Restaurante> restTest = dao.consultarRestaurantesBairro(new Bairro("Azenha"));
+        assertEquals(2, restTest.size());
+    }
+    
+    @Test
+    public void testConsultarPorNome123() {
+        List<Restaurante> restTest = dao.consultarRestaurantesNome("Restaurante 123");
+        assertEquals(1, restTest.size());
+    }
+    
+    @Test
+    public void testConsultarPorNomeABC() {
+        List<Restaurante> restTest = dao.consultarRestaurantesNome("Restaurante ABC");
+        assertEquals(1, restTest.size());
+    }
+    
 }
