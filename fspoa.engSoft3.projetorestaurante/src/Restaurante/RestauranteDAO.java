@@ -12,8 +12,8 @@ public class RestauranteDAO {
         return resultado;
     }
 
-    public void inserirRestaurante(String nome, Bairro bairro) {
-        Restaurante rest = new Restaurante(nome, bairro);
+    public void inserirRestaurante(String nome, String endereco, Bairro bairro) {
+        Restaurante rest = new Restaurante(nome, endereco, bairro);
         resultado.add(rest);
     }
 
@@ -42,9 +42,9 @@ public class RestauranteDAO {
     public void preparar() {
         Bairro b1 = new Bairro("Azenha");
         Bairro b2 = new Bairro("Centro");
-        inserirRestaurante("Restaurante QWET", b1);
-        inserirRestaurante("Restaurante #$%&", b1);
-        inserirRestaurante("Restaurante ABC", b2);
-        inserirRestaurante("Restaurante 123", b2);
+        inserirRestaurante("Restaurante QWET","Rua A, nº1", b1);
+        inserirRestaurante("Restaurante #$%&","Rua B, nº2", b1);
+        inserirRestaurante("Restaurante ABC","Rua C, nº3", b2);
+        inserirRestaurante("Restaurante 123","Rua D, nº4", b2);
     }
 }
